@@ -1,0 +1,34 @@
+name: Deploy Course
+
+on:
+  workflow_dispatch:
+    inputs:
+      course-json-path:
+        description: 'Path to the course JSON file'
+        required: true
+        default: 'course_deploy.json'
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Deploy to qBraid
+        id: deploy
+        uses: qBraid/upload-course-action@v0.1.0-beta
+        with:
+          api-key: ${{ secrets.QBRAID_API_KEY }}
+          repo-read-token: ${{ secrets.GITHUB_TOKEN }}
+          course-json-path: ${{ github.event.inputs.course-json-path }}
+
+      - name: Deployment summary
+        run: |
+          echo "Course: ${{ steps.deploy.outputs.course_name }}"
+          echo "Custom ID: ${{ steps.deploy.outputs.course-custom-id }}"
+          echo "URL: ${{ steps.deploy.outputs.qbook_url }}"
