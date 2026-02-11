@@ -16,7 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: dev
     steps:
-    
       # Checkout current repo
       - name: Checkout code
         uses: actions/checkout@v6
@@ -26,14 +25,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: qBraid/upload-course-action
-          ref: main
+          ref: v0.1.2-beta
           token: ${{ secrets.GH_TOKEN }}
           path: .github/actions/upload-action
-
+          
       # Deploy to qbraid using the upload course action
       - name: Deploy to qBraid
         id: deploy
-        uses: qBraid/upload-course-action@main
+        uses: qBraid/upload-course-action@v0.1.2-beta
         with:
           # the api key associated with the right organization user
           api-key: ${{ secrets.QBRAID_API_KEY }}
