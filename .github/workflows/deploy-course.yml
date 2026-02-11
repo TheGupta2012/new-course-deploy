@@ -21,7 +21,7 @@ jobs:
 
       - name: Deploy to qBraid
         id: deploy
-        uses: qBraid/upload-course-action@main
+        uses: qBraid/upload-course-action@v0.1.0-beta
         with:
           api-key: ${{ secrets.QBRAID_API_KEY }}
           repo-read-token: ${{ secrets.GH_TOKEN }}
