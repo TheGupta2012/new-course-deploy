@@ -25,14 +25,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: qBraid/upload-course-action
-          ref: v0.1.2-beta
+          ref: v0.1.0-beta
           token: ${{ secrets.GH_TOKEN }}
           path: .github/actions/upload-action
           
       # Deploy to qbraid using the upload course action
       - name: Deploy to qBraid
         id: deploy
-        uses: qBraid/upload-course-action@v0.1.2-beta
+        uses: qBraid/upload-course-action@v0.1.0-beta
         with:
           # the api key associated with the right organization user
           api-key: ${{ secrets.QBRAID_API_KEY }}
