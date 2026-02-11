@@ -21,10 +21,10 @@ jobs:
 
       - name: Deploy to qBraid
         id: deploy
-        uses: qBraid/upload-course-action@v0.1.0-beta
+        uses: qBraid/upload-course-action@main
         with:
           api-key: ${{ secrets.QBRAID_API_KEY }}
-          repo-read-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-read-token: ${{ secrets.GH_TOKEN }}
           course-json-path: ${{ github.event.inputs.course-json-path }}
 
       - name: Deployment summary
