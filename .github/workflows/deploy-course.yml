@@ -19,11 +19,14 @@ jobs:
       # Checkout current repo
       - name: Checkout code
         uses: actions/checkout@v6
+        with:
+          persist-credentials: false
 
       # Checkout upload action repo 
       - name: Checkout Upload Action
         uses: actions/checkout@v4
         with:
+          persist-credentials: false
           repository: qBraid/upload-course-action
           ref: v0.1.0-beta
           token: ${{ secrets.GH_TOKEN }}
@@ -34,6 +37,7 @@ jobs:
         id: deploy
         uses: ./.github/actions/upload-action
         with:
+          persist-credentials: false
           # the api key associated with the right organization user
           api-key: ${{ secrets.QBRAID_API_KEY }}
 
