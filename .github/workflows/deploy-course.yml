@@ -32,7 +32,7 @@ jobs:
       # Deploy to qbraid using the upload course action
       - name: Deploy to qBraid
         id: deploy
-        uses: qBraid/upload-course-action@v0.1.0-beta
+        uses: ./.github/actions/upload-action
         with:
           # the api key associated with the right organization user
           api-key: ${{ secrets.QBRAID_API_KEY }}
