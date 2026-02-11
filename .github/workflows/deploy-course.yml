@@ -16,20 +16,29 @@ jobs:
     runs-on: ubuntu-latest
     environment: dev
     steps:
+    
+      # Checkout current repo
       - name: Checkout code
         uses: actions/checkout@v6
-        with:
-          token: ${{ secrets.GH_TOKEN }}
 
+      # Checkout upload action repo 
+      - name: Checkout Upload Action
+        uses: actions/checkout@v4
+        with:
+          repository: qBraid/upload-course-action
+          ref: main
+          token: ${{ secrets.GH_TOKEN }}
+          path: .github/actions/upload-action
+
+      # Deploy to qbraid using the upload course action
       - name: Deploy to qBraid
         id: deploy
         uses: qBraid/upload-course-action@main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
           # the api key associated with the right organization user
           api-key: ${{ secrets.QBRAID_API_KEY }}
 
+          repo-read-token: ${{ secrets.GH_TOKEN }}
           # input to the path of the course json file which has all the course details and
           # content to be deployed
           course-json-path: ${{ github.event.inputs.course-json-path }}
