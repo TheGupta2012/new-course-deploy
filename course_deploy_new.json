@@ -1,0 +1,57 @@
+{
+  "courseName": "Linear Algebra",
+  "courseDescription": "An introduction to linear algebra for students",
+  "visibility": "public",
+  "tags": ["linear-algebra", "matrix", "vectors"],
+  "imageLink": {
+    "darkLogo": "",
+    "lightLogo": ""
+  },
+  "deployedTo": ["qbraid.com"],
+  "content": [
+    {
+      "chapterName": "Matrices",
+      "chapterNumber": 1,
+      "baseFilePath": "./new-course/chapter-1/introduction.ipynb",
+      "chapterFileName": "introduction.ipynb",
+      "kernelName": "qbraid_python",
+      "kernelId": "qbraid_python",
+      "sections": [
+        {
+          "sectionNumber": 1.1,
+          "sectionName": "Matrix Additions",
+          "baseFilePath": "./new-course/chapter-1/section1.ipynb",
+          "chapterFileName": "section1.ipynb",
+          "kernelName": "qbraid_python",
+          "kernelId": "qbraid_python"
+        },
+        {
+          "sectionNumber": 1.2,
+          "sectionName": "Matrix Multiplication",
+          "baseFilePath": "./new-course/chapter-1/section2.ipynb",
+          "chapterFileName": "section2.ipynb",
+          "kernelName": "qbraid_python",
+          "kernelId": "qbraid_python"
+        }
+      ]
+    },
+    {
+      "chapterName": "Chapter 2",
+      "chapterNumber": 2,
+      "baseFilePath": "./new-course/chapter-2/introduction.ipynb",
+      "chapterFileName": "introduction.ipynb",
+      "kernelName": "qbraid_python",
+      "kernelId": "qbraid_python",
+      "sections": [
+        {
+          "sectionNumber": 2.1,
+          "sectionName": "Fundamentals of Tensor Products",
+          "baseFilePath": "./new-course/chapter-2/section1.ipynb",
+          "chapterFileName": "section1.ipynb",
+          "kernelName": "qbraid_python",
+          "kernelId": "qbraid_python"
+        }
+      ]
+    }
+  ]
+}
