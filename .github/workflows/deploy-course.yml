@@ -28,7 +28,7 @@ jobs:
         with:
           persist-credentials: false
           repository: qBraid/upload-course-action
-          ref: v0.1.2-beta
+          ref: main
           token: ${{ secrets.GH_TOKEN }}
           path: .github/actions/upload-action
           
