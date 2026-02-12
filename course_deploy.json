@@ -1,6 +1,5 @@
 {
-  "courseName": "Quantum Chemistry FDP 2026",
-  "courseID": "q-course-quantum-chemistry-fdp-2026",
+  "courseName": "Quantum Chemistry FDP 2026 - 2",
   "courseDescription": "An introduction to quantum chemistry, covering quantum simulation techniques and applications.",
   "visibility": "public",
   "tags": ["quantum-chemistry", "quantum-computing", "simulation"],
