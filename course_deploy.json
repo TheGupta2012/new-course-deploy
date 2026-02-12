@@ -13,6 +13,7 @@
       "chapterName": "Quantum Simulation Tutorial",
       "chapterNumber": 1,
       "baseFilePath": "./Current_QuantumChem/qsim_tut.ipynb",
+      "chapterFileName": "qsim_tut.ipynb",
       "kernelName": "python3",
       "kernelId": "Python 3",
       "sections": [
@@ -20,6 +21,7 @@
           "sectionNumber": 1.1,
           "sectionName": "Introduction to Quantum Simulation",
           "baseFilePath": "./Current_QuantumChem/section1/intro_qsim.ipynb",
+          "chapterFileName": "intro_qsim.ipynb",
           "kernelName": "python3",
           "kernelId": "Python 3"
         },
@@ -27,6 +29,7 @@
           "sectionNumber": 1.2,
           "sectionName": "Setting Up the Simulation Environment",
           "baseFilePath": "./Current_QuantumChem/section1/setup_simulation_environment.ipynb",
+          "chapterFileName": "setup_simulation_environment.ipynb",
           "kernelName": "python3",
           "kernelId": "Python 3"
         }
@@ -36,6 +39,7 @@
       "chapterName": "Chapter 2",
       "chapterNumber": 2,
       "baseFilePath": "./Current_QuantumChem/section2/intro.ipynb",
+      "chapterFileName": "intro.ipynb",
       "kernelName": "python3",
       "kernelId": "Python 3",
       "sections": [
@@ -43,6 +47,7 @@
           "sectionNumber": 2.1,
           "sectionName": "Fundamentals of Quantum Chemistry",
           "baseFilePath": "./Current_QuantumChem/section2/Chap1.ipynb",
+          "chapterFileName": "Chap1.ipynb",
           "kernelName": "python3",
           "kernelId": "Python 3"
         }
