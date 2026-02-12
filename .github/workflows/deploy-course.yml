@@ -7,6 +7,11 @@ on:
         description: 'Path to the course JSON file'
         required: true
         default: 'course_deploy.json'
+      # use this for the re-publishing 
+      mode:
+        description: 'Operation mode: "create" or "update"'
+        required: false
+        default: 'create'
 
 permissions:
   contents: write
@@ -45,6 +50,10 @@ jobs:
           # input to the path of the course json file which has all the course details and
           # content to be deployed
           course-json-path: ${{ github.event.inputs.course-json-path }}
+
+          # operation mode - create for new course deployment, update for re-publishing an existing course with changes
+          mode: ${{ github.event.inputs.mode }}
+
 
       - name: Deployment summary
         run: |
